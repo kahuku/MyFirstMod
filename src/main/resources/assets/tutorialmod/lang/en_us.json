@@ -2,5 +2,6 @@
   "item.tutorialmod.example_item": "Example Item",
   "block.tutorialmod.example_block": "Example Block",
   "entity.tutorialmod.example_entity": "Example Entity",
-  "item.tutorialmod.example_entity_spawn_egg": "Spawn Example Entity"
+  "item.tutorialmod.example_entity_spawn_egg": "Spawn Example Entity",
+  "itemGroup.tutorialMod": "Tutorial Mod"
 }

@@ -16,13 +16,13 @@ public final class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MODID);
 
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(TutorialMod.TUTORIAL_TAB)));
 
     public static final RegistryObject<ForgeSpawnEggItem> EXAMPLE_ENTITY_SPAWN_EGG = ITEMS.register("example_entity_spawn_egg",
-            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x6d6e6e, 0x03fcfc, new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(16)));
+            () -> new ForgeSpawnEggItem(EntityInit.EXAMPLE_ENTITY, 0x6d6e6e, 0x03fcfc, new Item.Properties().tab(TutorialMod.TUTORIAL_TAB).stacksTo(16)));
 
     // Block items
     public static final RegistryObject<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block",
             () -> new BlockItem(BlockInit.EXAMPLE_BLOCK.get(),
-                    new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+                    new Item.Properties().tab(TutorialMod.TUTORIAL_TAB)));
 }
