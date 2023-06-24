@@ -1,8 +1,10 @@
 package com.kahuku.minecraft.tutorialmod.common.entity;
 
+import com.kahuku.minecraft.tutorialmod.TutorialMod;
 import com.kahuku.minecraft.tutorialmod.core.init.EntityInit;
 import com.kahuku.minecraft.tutorialmod.core.init.ItemInit;
 import com.kahuku.minecraft.tutorialmod.core.init.SoundInit;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,6 +20,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 
 public class ExampleEntity extends Animal {
+
+    private static final ResourceLocation LOOT_TABLE = new ResourceLocation(TutorialMod.MODID, "entities/example_entity");
 
     public ExampleEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -59,5 +63,10 @@ public class ExampleEntity extends Animal {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundInit.EXAMPLE_ENTITY_DEATH.get();
+    }
+
+    @Override
+    protected ResourceLocation getDefaultLootTable() {
+        return LOOT_TABLE;
     }
 }
