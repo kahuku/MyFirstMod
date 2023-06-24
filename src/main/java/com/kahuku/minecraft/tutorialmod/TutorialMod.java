@@ -3,6 +3,7 @@ package com.kahuku.minecraft.tutorialmod;
 import com.kahuku.minecraft.tutorialmod.core.init.BlockInit;
 import com.kahuku.minecraft.tutorialmod.core.init.EntityInit;
 import com.kahuku.minecraft.tutorialmod.core.init.ItemInit;
+import com.kahuku.minecraft.tutorialmod.core.init.SoundInit;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -15,6 +16,7 @@ public class TutorialMod {
     public TutorialMod() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        SoundInit.SOUNDS.register(bus);
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
         EntityInit.ENTITIES.register(bus);

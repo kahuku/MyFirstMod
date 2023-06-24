@@ -2,7 +2,10 @@ package com.kahuku.minecraft.tutorialmod.common.entity;
 
 import com.kahuku.minecraft.tutorialmod.core.init.EntityInit;
 import com.kahuku.minecraft.tutorialmod.core.init.ItemInit;
+import com.kahuku.minecraft.tutorialmod.core.init.SoundInit;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
@@ -41,5 +44,20 @@ public class ExampleEntity extends Animal {
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
         return EntityInit.EXAMPLE_ENTITY.get().create(level);
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundInit.EXAMPLE_ENTITY_AMBIENT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource source) {
+        return SoundInit.EXAMPLE_ENTITY_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundInit.EXAMPLE_ENTITY_DEATH.get();
     }
 }
