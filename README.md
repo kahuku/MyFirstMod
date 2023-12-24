@@ -33,7 +33,7 @@ My first mod for Minecraft 1.17. Doing tutorials to learn the basics of modding.
 - In the assets/mod/models folder, create a new JSON file for the item
 - In assets/mod/lang/en_us.json, add a new entry for the item
 
-## Creatine a new block
+## Creating a new block
 - In BlockInit.java, create a DeferredRegister for Blocks
     - A DeferredRegister is a way to register blocks in the game
     - The first argument is the type of block you want to register
